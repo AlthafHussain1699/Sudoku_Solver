@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <div id="sudoku-grid">
+            <table>
+                <!-- Create a 9x9 Sudoku grid -->
+                <script>
+                    for (let row = 0; row < 9; row++) {
+                        document.write("<tr>");
+                        for (let col = 0; col < 9; col++) {
+                            document.write(`<td><input type="text" maxlength="1" id="cell-${row}-${col}" class="cell"></td>`);
+                        }
+                        document.write("</tr>");
+                    }
+                </script>
+            </table>
+        </div>
+        <button id="solve-button" onclick="solveSudoku()">Solve</button>
+        <button id="reset-button" onclick="resetSudoku()">Reset</button>
+    </div>
+    <script src = "script.js">
+    </script>
+</body>
+</html>
